@@ -27,6 +27,10 @@ export const translations = {
     projects: {
       title: 'Featured Projects',
       subtitle: 'Some of my recent work',
+      all: 'All Projects',
+      frontend: 'Front-End',
+      backend: 'Back-End',
+      fullstack: 'Full Stack',
       viewCode: 'View Code',
       viewLive: 'View Live',
       viewFrontend: 'Frontend',
@@ -80,6 +84,10 @@ export const translations = {
     projects: {
       title: 'المشاريع المميزة',
       subtitle: 'بعض من أعمالي الأخيرة',
+      all: 'كل المشاريع',
+      frontend: 'الواجهات الأمامية',
+      backend: 'الواجهات الخلفية',
+      fullstack: 'Full Stack',
       viewCode: 'عرض الكود',
       viewLive: 'عرض مباشر',
       viewFrontend: 'الواجهة الأمامية',

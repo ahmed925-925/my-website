@@ -23,12 +23,6 @@ export default function Contact() {
       label: t.contact.github,
       value: 'amedmohmed925',
       href: personalInfo.github
-    },
-    {
-      icon: ExternalLink,
-      label: t.contact.portfolio,
-      value: 'ahmed-muhamed.netlify.app',
-      href: personalInfo.portfolio
     }
   ];
 
