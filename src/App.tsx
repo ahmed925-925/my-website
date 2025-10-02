@@ -5,8 +5,12 @@ import Projects from './components/Projects';
 import Education from './components/Education';
 import Contact from './components/Contact';
 
+
+
 function App() {
+  
   return (
+    
     <div className="min-h-screen">
       <Sidebar />
 
