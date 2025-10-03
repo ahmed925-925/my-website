@@ -2,6 +2,7 @@ import { Github, Mail, MapPin } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useLanguage } from '../contexts/LanguageContext';
 import { personalInfo } from '../data/portfolio';
+import OptimizedImage from './OptimizedImage';
 
 export default function Hero() {
   const { t } = useLanguage();
@@ -144,12 +145,12 @@ export default function Hero() {
                 </div>
                 
                 {/* Actual image - will show when you add the image */}
-                <img
+                <OptimizedImage
                   src={personalInfo.profileImage}
                   alt={personalInfo.name}
                   className="absolute inset-0 w-full h-full object-cover"
+                  priority={true}
                   onError={(e) => {
-                    // Hide image if it fails to load
                     e.currentTarget.style.display = 'none';
                   }}
                 />

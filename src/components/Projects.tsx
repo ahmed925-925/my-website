@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ExternalLink, Github, ArrowRight } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { projects } from '../data/portfolio';
+import OptimizedImage from './OptimizedImage';
 
 type FilterType = 'all' | 'frontend' | 'backend' | 'fullstack';
 
@@ -90,12 +91,11 @@ export default function Projects() {
               >
                 {/* Project Image */}
                 <div className="h-48 bg-gradient-to-br from-blue-500 to-purple-600 dark:from-blue-600 dark:to-purple-800 relative overflow-hidden">
-                  <img
+                  <OptimizedImage
                     src={project.image}
                     alt={project.title[language]}
                     className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
                     onError={(e) => {
-                      // Show gradient background if image fails to load
                       e.currentTarget.style.display = 'none';
                     }}
                   />
