@@ -1,3 +1,4 @@
+
 export const personalInfo = {
   name: 'Ahmed Mohamed Mahmoud Ibrahim',
   title: 'MERN Stack Developer',
@@ -5,6 +6,7 @@ export const personalInfo = {
   phone: '+201029851247',
   location: 'Qena, Egypt',
   github: 'https://github.com/amedmohmed925',
+  Linkedin: 'https://www.linkedin.com/in/aahmedmuhaamed',
   // Add your profile image URL here (can be from public folder or external URL)
   profileImage: 'https://i.imgur.com/9GJiXYg.jpeg' // You can update this path with your actual image
 };

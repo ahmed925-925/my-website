@@ -1,4 +1,4 @@
-import { Mail, Phone, Github, ExternalLink } from 'lucide-react';
+import { Mail, Phone, Github, ExternalLink, Linkedin } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { personalInfo } from '../data/portfolio';
 
@@ -23,6 +23,12 @@ export default function Contact() {
       label: t.contact.github,
       value: 'amedmohmed925',
       href: personalInfo.github
+    },
+    {
+      icon: Linkedin,
+      label: t.contact.Linkedin,
+      value: 'amedmohmed925',
+      href: personalInfo.Linkedin
     }
   ];
 

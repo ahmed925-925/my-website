@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Moon, Sun, Globe, Menu, X, Zap, Briefcase, GraduationCap, Mail, Home } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { useTheme } from '../contexts/ThemeContext';
 import { useLanguage } from '../contexts/LanguageContext';
 
@@ -16,13 +17,28 @@ export default function Sidebar() {
   const { theme, toggleTheme } = useTheme();
   const { language, toggleLanguage, t } = useLanguage();
   const [isOpen, setIsOpen] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      setIsOpen(false); // Close sidebar on mobile after navigation
+    // If not on home page, navigate to home first
+    if (location.pathname !== '/') {
+      navigate('/');
+      // Wait for navigation to complete, then scroll to section
+      setTimeout(() => {
+        const element = document.getElementById(id);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }, 100);
+    } else {
+      // Already on home page, just scroll
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
     }
+    setIsOpen(false); // Close sidebar on mobile after navigation
   };
 
   const sidebarVariants = {
