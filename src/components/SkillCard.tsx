@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { memo } from 'react';
-import { LucideIcon } from 'lucide-react';
+import { Video as LucideIcon } from 'lucide-react';
 
 interface SkillCardProps {
   skill: string;
