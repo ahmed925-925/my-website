@@ -187,26 +187,53 @@ export const projects = [
   {
     id: 'ghrass',
     title: {
-      en: 'Ghrass Library Website',
-      ar: 'موقع مكتبة غراس'
+      en: 'Ghirass Library - Islamic & Literary Books Platform',
+      ar: 'مكتبة غِرَاسٌ - منصة الكتب الإسلامية والأدبية'
     },
     description: {
-      en: 'Created a platform for displaying and selling Islamic and educational books. Included inventory management and product display functionalities.',
-      ar: 'إنشاء منصة لعرض وبيع الكتب الإسلامية والتعليمية. تشمل إدارة المخزون ووظائف عرض المنتجات.'
+      en: 'An advanced e-commerce platform for selling Islamic and literary books, allowing users to browse and purchase books easily and securely, with an integrated inventory and order management system.',
+      ar: 'منصة إلكترونية متطورة لبيع الكتب الإسلامية والأدبية، تُمكن المستخدمين من تصفح وشراء الكتب بطريقة سهلة وآمنة، مع نظام إدارة متكامل للمخزون والطلبات.'
     },
     fullDescription: {
-      en: 'An e-commerce platform dedicated to Islamic and educational books. Built with React and Firebase, featuring real-time inventory management, search and filter capabilities, shopping cart functionality, and responsive design for optimal viewing on all devices.',
-      ar: 'منصة تجارة إلكترونية مخصصة للكتب الإسلامية والتعليمية. مبني باستخدام React و Firebase، يتميز بإدارة المخزون الفورية، قدرات البحث والتصفية، وظيفة سلة التسوق، وتصميم متجاوب للعرض الأمثل على جميع الأجهزة.'
+      en: 'Ghirass Library is a modern and sophisticated web application built with React.js technology, aimed at providing an exceptional purchasing experience for Islamic and literary books. The project features an attractive and responsive Arabic user interface, with full support for various categories such as Fiqh, Tafsir, Aqeedah, Hadith, Seerah, and Arabic language books. Built from scratch with advanced features including secure Firebase Authentication with user role support (Admin/User), smart shopping cart system with real-time data persistence, automatic inventory management with instant updates after each sale, comprehensive order management with email notifications via EmailJS, integrated admin dashboard for complete book management, and outstanding user experience with Bootstrap 5 and Animate.css effects. The platform includes image compression with CompressorJS, responsive design for all devices, high performance with Vite build tool, and scalable architecture for future growth.',
+      ar: 'مكتبة غِرَاسٌ هي تطبيق ويب حديث ومتطور مبني بتقنية React.js من الصفر، يهدف إلى توفير تجربة شراء مميزة للكتب الإسلامية والأدبية. يتميز المشروع بواجهة مستخدم جذابة ومتجاوبة باللغة العربية، مع دعم كامل للعديد من الفئات مثل كتب الفقه والتفسير والعقيدة والحديث والسيرة واللغة العربية. تم بناء المشروع بالكامل من الصفر مع ميزات متقدمة تشمل نظام مصادقة آمن عبر Firebase مع دعم أدوار المستخدمين (Admin/User)، سلة تسوق ذكية مع حفظ البيانات في الوقت الفعلي، إدارة تلقائية للمخزون مع تحديث فوري عند كل عملية بيع، إدارة شاملة للطلبات مع إرسال إشعارات عبر البريد الإلكتروني باستخدام EmailJS، لوحة تحكم إدارية متكاملة لإدارة الكتب بالكامل، وتجربة مستخدم متميزة مع تأثيرات Bootstrap 5 وAnimate.css. تشمل المنصة ضغط الصور باستخدام CompressorJS، تصميم متجاوب لجميع الأجهزة، أداء عالي مع أداة Vite، وبنية معمارية قابلة للتوسع.'
     },
-    technologies: ['React', 'Firebase', 'JavaScript', 'HTML', 'CSS'],
+    technologies: ['React.js', 'Vite', 'Firebase', 'Firestore', 'Firebase Storage', 'Firebase Authentication', 'Bootstrap', 'Animate.css', 'EmailJS', 'CompressorJS', 'React Router', 'React Toastify', 'FontAwesome', 'PropTypes'],
     links: {
-      live: 'https://ghrass-library.vercel.app/'
+      live: 'https://ghrass-library.vercel.app/',
+      github: 'https://github.com/amedmohmed925/ghrass-library'
     },
-    category: 'frontend',
+    category: 'fullstack',
     image: '/projects/ghrass.png',
     features: {
-      en: ['Real-time Inventory Management', 'Advanced Search & Filters', 'Shopping Cart', 'Responsive Design', 'Firebase Integration'],
-      ar: ['إدارة المخزون الفورية', 'بحث وتصفية متقدمة', 'سلة التسوق', 'تصميم متجاوب', 'تكامل Firebase']
+      en: [
+        '🔐 Secure Firebase Authentication with Role-Based Access (Admin/User)',
+        '🛒 Smart Shopping Cart with Real-Time Data Persistence',
+        '📦 Automatic Inventory Management with Instant Updates',
+        '📧 Comprehensive Order System with EmailJS Notifications',
+        '👨‍💼 Integrated Admin Dashboard for Complete Book Management',
+        '📚 Multiple Book Categories (Fiqh, Tafsir, Aqeedah, Hadith, Seerah, Arabic)',
+        '🖼️ Image Compression with CompressorJS Before Upload',
+        '📱 Fully Responsive Design with Bootstrap 5',
+        '✨ Attractive Visual Effects with Animate.css',
+        '⚡ High Performance with Vite Build Tool',
+        '🔍 Advanced Search and Filter System',
+        '📊 Order Tracking and Management Dashboard'
+      ],
+      ar: [
+        '🔐 مصادقة آمنة عبر Firebase مع أدوار المستخدمين (مدير/مستخدم)',
+        '🛒 سلة تسوق ذكية مع حفظ البيانات في الوقت الفعلي',
+        '📦 إدارة تلقائية للمخزون مع تحديث فوري',
+        '📧 نظام طلبات شامل مع إشعارات EmailJS',
+        '👨‍💼 لوحة تحكم إدارية متكاملة لإدارة الكتب',
+        '📚 فئات متعددة للكتب (فقه، تفسير، عقيدة، حديث، سيرة، لغة عربية)',
+        '🖼️ ضغط الصور باستخدام CompressorJS قبل الرفع',
+        '📱 تصميم متجاوب بالكامل مع Bootstrap 5',
+        '✨ تأثيرات بصرية جذابة مع Animate.css',
+        '⚡ أداء عالي مع أداة Vite',
+        '🔍 نظام بحث وتصفية متقدم',
+        '📊 لوحة متابعة وإدارة الطلبات'
+      ]
     }
   },
   
