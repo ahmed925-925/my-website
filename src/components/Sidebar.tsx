@@ -1,45 +1,23 @@
 import { useState } from 'react';
 import { Moon, Sun, Globe, Menu, X, Zap, Briefcase, GraduationCap, Mail, Home } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { useNavigate, useLocation } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { useTheme } from '../contexts/ThemeContext';
 import { useLanguage } from '../contexts/LanguageContext';
 
 const navItems = [
-  { id: 'about', icon: Home, label: 'About' },
-  { id: 'skills', icon: Zap, label: 'Skills' },
-  { id: 'projects', icon: Briefcase, label: 'Projects' },
-  { id: 'education', icon: GraduationCap, label: 'Education' },
-  { id: 'contact', icon: Mail, label: 'Contact' }
+  { id: '/', path: '/', icon: Home, label: 'Home' },
+  { id: 'skills', path: '/skills', icon: Zap, label: 'Skills' },
+  { id: 'projects', path: '/projects', icon: Briefcase, label: 'Projects' },
+  { id: 'education', path: '/education', icon: GraduationCap, label: 'Education' },
+  { id: 'contact', path: '/contact', icon: Mail, label: 'Contact' }
 ];
 
 export default function Sidebar() {
   const { theme, toggleTheme } = useTheme();
   const { language, toggleLanguage, t } = useLanguage();
   const [isOpen, setIsOpen] = useState(false);
-  const navigate = useNavigate();
   const location = useLocation();
-
-  const scrollToSection = (id: string) => {
-    // If not on home page, navigate to home first
-    if (location.pathname !== '/') {
-      navigate('/');
-      // Wait for navigation to complete, then scroll to section
-      setTimeout(() => {
-        const element = document.getElementById(id);
-        if (element) {
-          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-      }, 100);
-    } else {
-      // Already on home page, just scroll
-      const element = document.getElementById(id);
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
-    }
-    setIsOpen(false); // Close sidebar on mobile after navigation
-  };
 
   const sidebarVariants = {
     open: { width: '16rem' },
@@ -116,36 +94,47 @@ export default function Sidebar() {
           {/* Navigation */}
           <nav className="flex flex-col gap-2 w-full">
             {navItems.map((item) => (
-              <motion.button
+              <Link
                 key={item.id}
-                onClick={() => scrollToSection(item.id)}
-                whileHover={{ scale: 1.05, x: 5 }}
-                whileTap={{ scale: 0.95 }}
-                className="group relative flex items-center gap-4 px-4 py-3 rounded-xl hover:bg-gray-100 dark:hover:bg-gray-800 transition-all duration-200"
+                to={item.path}
+                onClick={() => setIsOpen(false)}
+                className="group relative"
               >
-                <item.icon className="w-6 h-6 text-gray-700 dark:text-gray-300 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors flex-shrink-0" />
-                
-                <AnimatePresence>
-                  {isOpen && (
-                    <motion.span
-                      variants={menuItemVariants}
-                      initial="closed"
-                      animate="open"
-                      exit="closed"
-                      className="text-gray-900 dark:text-white font-medium whitespace-nowrap"
-                    >
-                      {t.nav[item.id as keyof typeof t.nav]}
-                    </motion.span>
-                  )}
-                </AnimatePresence>
+                <motion.div
+                  whileHover={{ scale: 1.05, x: 5 }}
+                  whileTap={{ scale: 0.95 }}
+                  className={`flex items-center gap-4 px-4 py-3 rounded-xl hover:bg-gray-100 dark:hover:bg-gray-800 transition-all duration-200 ${
+                    location.pathname === item.path ? 'bg-blue-100 dark:bg-blue-900/30' : ''
+                  }`}
+                >
+                  <item.icon className={`w-6 h-6 flex-shrink-0 transition-colors ${
+                    location.pathname === item.path 
+                      ? 'text-blue-600 dark:text-blue-400' 
+                      : 'text-gray-700 dark:text-gray-300 group-hover:text-blue-600 dark:group-hover:text-blue-400'
+                  }`} />
+                  
+                  <AnimatePresence>
+                    {isOpen && (
+                      <motion.span
+                        variants={menuItemVariants}
+                        initial="closed"
+                        animate="open"
+                        exit="closed"
+                        className="text-gray-900 dark:text-white font-medium whitespace-nowrap"
+                      >
+                        {item.id === '/' ? t.nav.about : t.nav[item.id as keyof typeof t.nav]}
+                      </motion.span>
+                    )}
+                  </AnimatePresence>
 
-                {/* Tooltip for closed state */}
-                {!isOpen && (
-                  <span className="absolute left-full ml-4 px-3 py-1 bg-gray-900 dark:bg-gray-700 text-white text-sm rounded-md opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none z-50">
-                    {t.nav[item.id as keyof typeof t.nav]}
-                  </span>
-                )}
-              </motion.button>
+                  {/* Tooltip for closed state */}
+                  {!isOpen && (
+                    <span className="absolute left-full ml-4 px-3 py-1 bg-gray-900 dark:bg-gray-700 text-white text-sm rounded-md opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none z-50">
+                      {item.id === '/' ? t.nav.about : t.nav[item.id as keyof typeof t.nav]}
+                    </span>
+                  )}
+                </motion.div>
+              </Link>
             ))}
           </nav>
         </div>

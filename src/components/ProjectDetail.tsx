@@ -13,7 +13,12 @@ export default function ProjectDetail() {
 
   if (!project) {
     return (
-      <div className="min-h-screen flex items-center justify-center px-4 sm:px-6 md:px-8 py-20">
+      <motion.div 
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.15 }}
+        className="min-h-screen flex items-center justify-center px-4 sm:px-6 md:px-8 py-20"
+      >
         <div className="text-center">
           <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white mb-4">
             Project Not Found
@@ -25,15 +30,19 @@ export default function ProjectDetail() {
             Back to Home
           </button>
         </div>
-      </div>
+      </motion.div>
     );
   }
 
   return (
     <motion.div 
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
+      initial={{ opacity: 0, x: 20 }}
+      animate={{ opacity: 1, x: 0 }}
+      exit={{ opacity: 0, x: -20 }}
+      transition={{ 
+        duration: 0.15,
+        ease: [0.22, 1, 0.36, 1]
+      }}
       className="min-h-screen bg-gradient-to-br from-gray-50 via-blue-50 to-purple-50 dark:from-gray-900 dark:via-blue-950 dark:to-purple-950 relative overflow-hidden"
     >
       {/* Animated Background Elements */}
@@ -53,14 +62,17 @@ export default function ProjectDetail() {
       <div className="relative z-10 px-4 sm:px-6 md:px-8 py-8 sm:py-12 md:py-16">
         {/* Back Button */}
         <motion.button
-          initial={{ opacity: 0, x: -50 }}
+          initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
-          transition={{ type: 'spring', stiffness: 100, damping: 15 }}
-          onClick={() => navigate('/')}
+          transition={{ 
+            duration: 0.2,
+            ease: [0.22, 1, 0.36, 1]
+          }}
+          onClick={() => navigate('/projects')}
           className="mb-6 md:mb-8 flex items-center ml-12 gap-2 px-4 py-2 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-full shadow-lg hover:shadow-xl transition-all duration-300 group border border-gray-200 dark:border-gray-700"
         >
           <ArrowLeft className="w-4 h-4 sm:w-5 sm:h-5 group-hover:-translate-x-2 transition-transform duration-300 text-blue-600 dark:text-blue-400" />
-          <span className="font-medium text-sm sm:text-base text-gray-900 dark:text-white">Back to Portfolio</span>
+          <span className="font-medium text-sm sm:text-base text-gray-900 dark:text-white">Back to Projects</span>
         </motion.button>
 
         <div className="max-w-7xl mx-auto">
