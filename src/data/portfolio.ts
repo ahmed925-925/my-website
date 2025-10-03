@@ -274,7 +274,7 @@ export const skills = {
   tools: [
     'JavaScript (ES6+)', 'TypeScript', 'Git', 'GitHub',
     'Jest', 'Mocha', 'Supertest', 'Gulp.js', 'Pug.js',
-    'CI/CD (Vercel)'
+    'CI/CD (Vercel)','C++'
   ]
 };
 

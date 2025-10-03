@@ -36,7 +36,7 @@ function AnimatedRoutes() {
 function App() {
   return (
     <Router>
-      <div className="min-h-screen">
+      <div className="min-h-screen overflow-x-hidden">
         <Sidebar />
         <AnimatedRoutes />
       </div>

@@ -7,7 +7,7 @@ export default function Hero() {
   const { t } = useLanguage();
 
   return (
-    <section id="about" className="min-h-screen flex items-center justify-center px-8 py-20">
+    <section id="about" className="min-h-screen flex items-center justify-center px-4 sm:px-6 md:px-8 py-20 overflow-hidden">
       <div className="max-w-7xl w-full">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Text Content */}

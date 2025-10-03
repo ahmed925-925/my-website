@@ -8,15 +8,20 @@
   }
 
   body {
-    @apply bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white;
+    @apply bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white overflow-x-hidden;
   }
 
   html {
-    @apply scroll-smooth;
+    @apply scroll-smooth overflow-x-hidden;
   }
 
   html[dir="rtl"] {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  /* Prevent horizontal scroll */
+  body, html {
+    max-width: 100vw;
   }
 }
 
