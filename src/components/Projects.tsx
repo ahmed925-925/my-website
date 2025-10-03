@@ -83,29 +83,22 @@ export default function Projects() {
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: idx * 0.1 }}
+                layoutId={`project-${project.id}`}
                 whileHover={{ y: -8 }}
                 onClick={() => navigate(`/project/${project.id}`)}
                 className="group bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer"
               >
-                {/* Project Image/Gradient */}
+                {/* Project Image */}
                 <div className="h-48 bg-gradient-to-br from-blue-500 to-purple-600 dark:from-blue-600 dark:to-purple-800 relative overflow-hidden">
                   <img
                     src={project.image}
                     alt={project.title[language]}
-                    className="w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
                     onError={(e) => {
-                      e.currentTarget.style.opacity = '0';
+                      // Show gradient background if image fails to load
+                      e.currentTarget.style.display = 'none';
                     }}
                   />
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <motion.span
-                      initial={{ scale: 1 }}
-                      whileHover={{ scale: 1.2, rotate: 10 }}
-                      className="text-7xl opacity-80 group-hover:scale-110 transition-transform duration-300"
-                    >
-                      {project.category === 'fullstack' ? '🚀' : project.category === 'frontend' ? '🎨' : '⚙️'}
-                    </motion.span>
-                  </div>
                   
                   {/* Category Badge */}
                   <div className="absolute top-4 right-4 px-3 py-1 bg-white/90 dark:bg-gray-900/90 rounded-full text-xs font-semibold text-gray-900 dark:text-white backdrop-blur-sm">

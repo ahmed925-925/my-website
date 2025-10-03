@@ -10,11 +10,59 @@ export const personalInfo = {
 };
 
 export const projects = [
+  
   {
+    id: 'codie-market',
+    title: {
+      en: 'Codie Market - Digital Products Marketplace',
+      ar: 'كودي ماركت - سوق المنتجات الرقمية'
+    },
+    description: {
+      en: 'A modern web platform for discovering, buying, and selling digital products, templates, and business solutions. Features developer profiles, product ratings, cart management, and a responsive UI.',
+      ar: 'منصة ويب حديثة لاستكشاف وشراء وبيع المنتجات الرقمية والقوالب وحلول الأعمال. توفر المنصة ملفات تعريف للمطورين، تقييمات للمنتجات، إدارة سلة المشتريات، وواجهة مستخدم متجاوبة.'
+    },
+    fullDescription: {
+      en: 'Codie Market is a comprehensive marketplace for digital products and business templates. Users can browse developer profiles, view product details, add items to their cart, and complete purchases. The platform supports multi-language (Arabic/English), advanced search and filtering, and interactive forms for product creation. Built with React, Redux, Bootstrap, TailwindCSS, and integrates with a Node.js/Express backend API. Features include secure authentication with OTP verification, admin and seller dashboards, product management system, and a seamless shopping experience.',
+      ar: 'كودي ماركت هو سوق شامل للمنتجات الرقمية وقوالب الأعمال. يمكن للمستخدمين تصفح ملفات المطورين، عرض تفاصيل المنتجات، إضافة العناصر إلى السلة، وإتمام عمليات الشراء. تدعم المنصة تعدد اللغات (العربية/الإنجليزية)، البحث والتصفية المتقدمة، ونماذج تفاعلية لإنشاء المنتجات. تم بناء المنصة باستخدام React وRedux وBootstrap وTailwindCSS، وتتكامل مع واجهة برمجة تطبيقات باك-إند مبنية بـ Node.js/Express. تتضمن الميزات تسجيل دخول آمن مع التحقق عبر OTP، لوحات تحكم للإدارة والبائعين، نظام إدارة المنتجات، وتجربة تسوق سلسة.'
+    },
+    technologies: ['React', 'Redux', 'React Router', 'Bootstrap', 'TailwindCSS', 'Axios', 'Font Awesome', 'Vite', 'Node.js', 'Express.js', 'MongoDB'],
+    links: {
+      live: 'https://codiemarket.com'
+    },
+    category: 'fullstack',
+    image: '/projects/codie-market.png',
+    features: {
+      en: [
+        '👨‍💻 Developer Profiles with Ratings & Reviews',
+        '🛍️ Advanced Product Cards with Images, Prices & Tags',
+        '🛒 Complete Shopping Cart & Checkout System',
+        '🌐 Multi-Language Support (Arabic/English)',
+        '📱 Fully Responsive Design for All Devices',
+        '🔍 Advanced Search & Smart Filtering',
+        '📝 Interactive Forms for Product Creation',
+        '🔐 Secure Authentication with OTP Verification',
+        '👨‍💼 Admin & Seller Dashboard Panels',
+        '🔗 RESTful API Integration with Backend'
+      ],
+      ar: [
+        '👨‍💻 ملفات تعريف المطورين مع التقييمات والمراجعات',
+        '🛍️ بطاقات منتجات متقدمة مع الصور والأسعار والوسوم',
+        '🛒 نظام سلة مشتريات ودفع متكامل',
+        '🌐 دعم تعدد اللغات (عربي/إنجليزي)',
+        '📱 تصميم متجاوب بالكامل لجميع الأجهزة',
+        '🔍 بحث متقدم وتصفية ذكية',
+        '📝 نماذج تفاعلية لإنشاء المنتجات',
+        '🔐 مصادقة آمنة مع التحقق عبر OTP',
+        '👨‍💼 لوحات تحكم للإدارة والبائعين',
+        '🔗 تكامل RESTful API مع الباك-إند'
+      ]
+    }
+  },
+   {
     id: 'eduquest',
     title: {
       en: 'EduQuest.com',
-      ar: 'EduQuest.com'
+      ar: 'رحلة التعلم'
     },
     description: {
       en: 'Developed a comprehensive educational system (LMS) with basic and advanced features. Implemented JWT authentication, API interfaces for user management and payment gateway integration.',
@@ -26,16 +74,114 @@ export const projects = [
     },
     technologies: ['React', 'Node.js', 'Express.js', 'MongoDB', 'JWT', 'Firebase'],
     links: {
-      frontend: '#',
-      backend: '#'
+      frontend: 'https://github.com/amedmohmed925/Final-project-Frontend-project---nodejs-course',
+      backend: 'https://github.com/amedmohmed925/Final-Project-Nodejs',
+      live: 'https://eduquestcourses.netlify.app/'
     },
     category: 'fullstack',
-    image: '/projects/eduquest.jpg', // Add your project image
+    image: '/projects/eduquest.png', // Add your project image
     features: {
       en: ['User Authentication & Authorization', 'Course Management System', 'Payment Gateway Integration', 'Real-time Updates', 'Interactive Learning Modules'],
       ar: ['مصادقة وتفويض المستخدم', 'نظام إدارة الدورات', 'تكامل بوابة الدفع', 'التحديثات الفورية', 'وحدات تعليمية تفاعلية']
     }
   },
+   {
+    id: 'Casher',
+    title: {
+      en: 'Casher - Multi-Tenant POS System',
+      ar: 'كاشير - نظام نقاط البيع متعدد المستأجرين'
+    },
+    description: {
+      en: 'An advanced multi-tenant cashier system designed for supermarkets and large stores. Provides comprehensive management of products, invoices, customers, inventory, and financial reports with a smart subscription system.',
+      ar: 'نظام كاشير متقدم متعدد المستأجرين مصمم خصيصاً للسوبرماركت والمتاجر الكبيرة. يوفر إدارة شاملة للمنتجات، الفواتير، العملاء، المخزون والتقارير المالية مع نظام اشتراكات ذكي.'
+    },
+    fullDescription: {
+      en: 'Casher Project is a comprehensive Point of Sale (POS) management solution targeting supermarkets and large retail stores. Built with a multi-tenant architecture that allows each store owner to have a separate, isolated account with their own private data. Features include secure JWT authentication with OTP verification, advanced product and customer management, smart invoice system with automatic profit calculations, real-time inventory tracking, comprehensive analytics dashboard with daily/monthly/yearly reports, flexible subscription system with 30-day free trial, and a powerful Super Admin panel for complete system oversight.',
+      ar: 'نظام Casher هو حل متكامل لإدارة نقاط البيع يستهدف السوبرماركت والمتاجر الكبيرة. تم بناؤه بمعماريّة متعددة المستأجرين تتيح لكل مالك متجر الحصول على حساب منفصل ومعزول مع بياناته الخاصة. يتضمن نظام مصادقة آمن بـ JWT مع OTP، إدارة متقدمة للمنتجات والعملاء، نظام فواتير ذكي مع حساب تلقائي للأرباح، تتبع فوري للمخزون، لوحة تحليلات شاملة بتقارير يومية وشهرية وسنوية، نظام اشتراكات مرن مع فترة تجريبية 30 يوم، ولوحة Super Admin قوية لإدارة كاملة للنظام.'
+    },
+    technologies: ['Node.js', 'Express.js', 'MongoDB', 'Mongoose', 'JWT', 'Bcrypt', 'Multer', 'Cloudinary', 'Nodemailer', 'Express-Validator', 'Swagger UI', 'Winston', 'Helmet', 'CORS', 'Jest', 'Supertest'],
+    links: {
+      github: 'https://github.com/amedmohmed925/KasherProject',
+    },
+    category: 'backend',
+    image: '/projects/Casher.png',
+    features: {
+      en: [
+        '🔐 Secure JWT Authentication with OTP Verification',
+        '👥 Multi-Tenant Architecture with Isolated Data',
+        '📦 Advanced Product & Inventory Management',
+        '🧾 Smart Invoice System with Auto Profit Calculation',
+        '💳 Flexible Subscription System (30-day Free Trial)',
+        '📊 Comprehensive Analytics & Financial Reports',
+        '👨‍💼 Super Admin Panel for Complete Oversight',
+        '🛡️ Enterprise-Grade Security (XSS, CSRF, Rate Limiting)',
+        '📚 Full Swagger API Documentation',
+        '🧪 Automated Testing with Jest & Supertest'
+      ],
+      ar: [
+        '🔐 مصادقة آمنة بـ JWT مع التحقق عبر OTP',
+        '👥 معمارية متعددة المستأجرين مع بيانات معزولة',
+        '📦 إدارة متقدمة للمنتجات والمخزون',
+        '🧾 نظام فواتير ذكي مع حساب تلقائي للأرباح',
+        '💳 نظام اشتراكات مرن (فترة تجريبية 30 يوم)',
+        '📊 تحليلات شاملة وتقارير مالية',
+        '👨‍💼 لوحة Super Admin للإدارة الكاملة',
+        '🛡️ أمان على مستوى المؤسسات (XSS, CSRF, Rate Limiting)',
+        '📚 توثيق Swagger كامل لجميع الـ APIs',
+        '🧪 اختبارات آلية باستخدام Jest و Supertest'
+      ]
+    }
+  },
+  {
+    id: 'bidaya-platform',
+    title: {
+      en: 'Bidaya Platform - Educational Management System',
+      ar: 'منصة البداية - نظام إدارة تعليمية'
+    },
+    description: {
+      en: 'A comprehensive educational platform specialized in teaching mathematics for high school students. Features video lessons, interactive quizzes, assignments, and analytics with full Arabic support and dark mode.',
+      ar: 'منصة تعليمية شاملة متخصصة في تدريس الرياضيات لطلاب المرحلة الثانوية. توفر دروس فيديو، اختبارات تفاعلية، مهام، وتحليلات مع دعم كامل للعربية والوضع الليلي.'
+    },
+    fullDescription: {
+      en: 'Bidaya Platform is a comprehensive e-learning system specifically designed for high school students (grades 1-3) with support for science and literature tracks. Built with React and Node.js, the platform offers organized educational content, interactive quizzes with automatic grading, task management, video lessons, and comprehensive analytics. Features include secure authentication with OTP verification, code-based registration system, role-based access control (Student, Instructor, Admin), personal dashboard with progress tracking, academic calendar, and educational materials management. The platform provides both student and admin interfaces with complete CRUD operations, dark/light mode with saved preferences, and fully responsive mobile-first design with RTL Arabic support.',
+      ar: 'منصة البداية هي نظام تعليمي إلكتروني شامل مصمم خصيصاً لطلاب المرحلة الثانوية (الصفوف 1-3) مع دعم المسارين العلمي والأدبي. تم بناؤها باستخدام React و Node.js، توفر المنصة محتوى تعليمي منظم، اختبارات تفاعلية مع تصحيح تلقائي، إدارة المهام، دروس فيديو، وتحليلات شاملة. تتضمن الميزات مصادقة آمنة مع التحقق عبر OTP، نظام تسجيل قائم على الأكواد، التحكم في الوصول على أساس الأدوار (طالب، معلم، مشرف)، لوحة تحكم شخصية مع تتبع التقدم، تقويم أكاديمي، وإدارة المواد التعليمية. توفر المنصة واجهات للطلاب والإدارة مع عمليات CRUD كاملة، وضع داكن/فاتح مع حفظ الإعدادات، وتصميم متجاوب بالكامل mobile-first مع دعم RTL للعربية.'
+    },
+    technologies: ['React', 'Redux Toolkit', 'React Router', 'Node.js', 'Express.js', 'MongoDB', 'Mongoose', 'JWT', 'Bcrypt', 'Nodemailer', 'Express Validator', 'Joi', 'CSS3', 'Vercel'],
+    links: {
+      live: 'https://incomparable-bubblegum-7cd17f.netlify.app/'
+    },
+    category: 'fullstack',
+    image: '/projects/bidaya-platform.png',
+    features: {
+      en: [
+        '🎓 Complete Educational Management for High School (Grades 1-3)',
+        '📹 Interactive Video Lessons with Multiple Quality Options',
+        '🧠 Smart Quizzes with Automatic Grading & Detailed Analytics',
+        '📝 Assignment System with Submission Tracking',
+        '📊 Comprehensive Dashboard with Progress Analytics',
+        '📅 Academic Calendar with Events & Deadlines',
+        '🔐 Secure Authentication with OTP Email Verification',
+        '👥 Role-Based Access Control (Student, Instructor, Admin)',
+        '🌙 Dark/Light Mode with Saved Preferences',
+        '🌐 Full RTL Arabic Support & Mobile-First Design'
+      ],
+      ar: [
+        '🎓 إدارة تعليمية كاملة للمرحلة الثانوية (الصفوف 1-3)',
+        '📹 دروس فيديو تفاعلية مع خيارات جودة متعددة',
+        '🧠 اختبارات ذكية مع تصحيح تلقائي وتحليلات تفصيلية',
+        '📝 نظام مهام مع تتبع التسليم',
+        '📊 لوحة تحكم شاملة مع تحليلات التقدم',
+        '📅 تقويم أكاديمي مع الفعاليات والمواعيد النهائية',
+        '🔐 مصادقة آمنة مع التحقق عبر OTP بالبريد الإلكتروني',
+        '👥 التحكم في الوصول على أساس الأدوار (طالب، معلم، مشرف)',
+        '🌙 وضع داكن/فاتح مع حفظ الإعدادات',
+        '🌐 دعم كامل للعربية RTL وتصميم Mobile-First'
+      ]
+    }
+  },
+  
+ 
+ 
   {
     id: 'ghrass',
     title: {
@@ -52,90 +198,66 @@ export const projects = [
     },
     technologies: ['React', 'Firebase', 'JavaScript', 'HTML', 'CSS'],
     links: {
-      live: '#'
+      live: 'https://ghrass-library.vercel.app/'
     },
     category: 'frontend',
-    image: '/projects/ghrass.jpg',
+    image: '/projects/ghrass.png',
     features: {
       en: ['Real-time Inventory Management', 'Advanced Search & Filters', 'Shopping Cart', 'Responsive Design', 'Firebase Integration'],
       ar: ['إدارة المخزون الفورية', 'بحث وتصفية متقدمة', 'سلة التسوق', 'تصميم متجاوب', 'تكامل Firebase']
     }
   },
+  
   {
-    id: 'ecommerce-api',
+    id: 'rawnaq',
     title: {
-      en: 'E-Commerce API',
-      ar: 'واجهة برمجة التجارة الإلكترونية'
+      en: 'Rawnaq - Arabic Fashion E-Commerce',
+      ar: 'رونق - متجر الأزياء العربية'
     },
     description: {
-      en: 'Designed and developed a REST API for managing products, orders, and users in an e-commerce system.',
-      ar: 'تصميم وتطوير REST API لإدارة المنتجات والطلبات والمستخدمين في نظام التجارة الإلكترونية.'
+      en: 'A modern e-commerce platform specializing in authentic Arabic fashion. Combines Arab heritage with contemporary design featuring elegant Islamic patterns, gold and olive colors, and full RTL Arabic support. Built with Bolt AI assistance for design.',
+      ar: 'منصة تجارة إلكترونية عصرية متخصصة في الأزياء العربية الأصيلة. يجمع بين التراث العربي والتصميم المعاصر مع نقوش إسلامية أنيقة، ألوان ذهبية وزيتونية، ودعم كامل للعربية RTL. تم البناء بمساعدة Bolt AI للتصميم.'
     },
     fullDescription: {
-      en: 'A robust RESTful API built with Node.js and Express.js for e-commerce applications. Features include complete CRUD operations for products, orders, and user management, JWT authentication, MongoDB database integration, and comprehensive error handling.',
-      ar: 'واجهة برمجة RESTful قوية مبنية باستخدام Node.js و Express.js لتطبيقات التجارة الإلكترونية. تتضمن عمليات CRUD كاملة للمنتجات والطلبات وإدارة المستخدمين، مصادقة JWT، تكامل قاعدة بيانات MongoDB، ومعالجة شاملة للأخطاء.'
+      en: 'Rawnaq is a comprehensive e-commerce platform built with cutting-edge web technologies, specifically designed for authentic Arabic fashion. The platform delivers a seamless shopping experience that combines authenticity with modernity. Features include an elegant Islamic design with geometric patterns and Cairo Arabic font, comprehensive admin dashboard with live statistics and interactive charts, smart shopping cart with automatic data persistence, secure authentication system with protected routes, product management with multiple images and variants, order tracking and customer management, reports and analytics with Recharts, and fully responsive design across all devices. The project showcases beautiful Islamic backgrounds, custom icons (crescent, star, patterns), and smooth animations with Framer Motion.',
+      ar: 'رونق هو منصة تجارة إلكترونية متكاملة مبنية بأحدث تقنيات الويب، مصممة خصيصاً للأزياء العربية الأصيلة. توفر المنصة تجربة تسوق سلسة تجمع بين الأصالة والعصرية. تتضمن الميزات تصميم إسلامي أنيق مع نقوش هندسية وخط Cairo العربي، لوحة إدارة شاملة مع إحصائيات حية ورسوم بيانية تفاعلية، سلة تسوق ذكية مع حفظ تلقائي للبيانات، نظام مصادقة آمن مع حماية للمسارات، إدارة المنتجات مع صور متعددة ومتغيرات، تتبع الطلبات وإدارة العملاء، تقارير وتحليلات مع Recharts، وتصميم متجاوب بالكامل لجميع الأجهزة. يعرض المشروع خلفيات إسلامية جميلة، أيقونات مخصصة (هلال، نجمة، زخارف)، ورسوم متحركة سلسة مع Framer Motion.'
     },
-    technologies: ['Node.js', 'Express.js', 'MongoDB', 'Mongoose', 'RESTful API'],
+    technologies: ['React', 'TypeScript', 'Vite', 'Tailwind CSS', 'React Router', 'React Hook Form', 'React Query', 'Framer Motion', 'Recharts', 'Headless UI', 'Heroicons', 'Lucide React', 'Yup', 'date-fns', 'Supabase'],
     links: {
-      github: '#'
-    },
-    category: 'backend',
-    image: '/projects/ecommerce-api.jpg',
-    features: {
-      en: ['RESTful API Design', 'JWT Authentication', 'CRUD Operations', 'MongoDB Integration', 'Error Handling'],
-      ar: ['تصميم RESTful API', 'مصادقة JWT', 'عمليات CRUD', 'تكامل MongoDB', 'معالجة الأخطاء']
-    }
-  },
-  {
-    id: 'products-management',
-    title: {
-      en: 'Products Management System',
-      ar: 'نظام إدارة المنتجات'
-    },
-    description: {
-      en: 'Built an application for adding, editing, and deleting products with Excel data export functionality.',
-      ar: 'بناء تطبيق لإضافة وتعديل وحذف المنتجات مع وظيفة تصدير البيانات إلى Excel.'
-    },
-    fullDescription: {
-      en: 'A comprehensive product management application with full CRUD functionality. Features include data validation, Excel export capabilities, local storage persistence, and an intuitive user interface for managing product inventories.',
-      ar: 'تطبيق شامل لإدارة المنتجات مع وظائف CRUD كاملة. يتضمن التحقق من صحة البيانات، قدرات تصدير Excel، الاستمرارية في التخزين المحلي، وواجهة مستخدم بديهية لإدارة مخزون المنتجات.'
-    },
-    technologies: ['HTML', 'CSS', 'JavaScript'],
-    links: {
-      live: '#'
+      github: 'https://github.com/amedmohmed925/newBrand',
+      live: 'https://fancy-twilight-9285bc.netlify.app/'
     },
     category: 'frontend',
-    image: '/projects/products-management.jpg',
+    image: '/projects/rawnaq.png',
     features: {
-      en: ['CRUD Operations', 'Excel Export', 'Data Validation', 'Local Storage', 'Responsive UI'],
-      ar: ['عمليات CRUD', 'تصدير Excel', 'التحقق من البيانات', 'التخزين المحلي', 'واجهة متجاوبة']
+      en: [
+        '🕌 Elegant Islamic Design with Geometric Patterns',
+        '🛍️ Complete E-Commerce with Cart & Checkout',
+        '📊 Admin Dashboard with Live Analytics & Charts',
+        '🎨 Cairo Arabic Font & Full RTL Support',
+        '🌙 Custom Islamic Icons (Crescent, Star, Patterns)',
+        '🔐 Secure Authentication & Protected Routes',
+        '📦 Product Management with Multiple Images & Variants',
+        '📱 100% Responsive Design for All Devices',
+        '✨ Smooth Animations with Framer Motion',
+        '🤖 Built with Bolt AI Design Assistance'
+      ],
+      ar: [
+        '🕌 تصميم إسلامي أنيق مع نقوش هندسية',
+        '🛍️ تجارة إلكترونية كاملة مع سلة ودفع',
+        '📊 لوحة إدارة مع تحليلات حية ورسوم بيانية',
+        '🎨 خط Cairo العربي ودعم RTL كامل',
+        '🌙 أيقونات إسلامية مخصصة (هلال، نجمة، زخارف)',
+        '🔐 مصادقة آمنة ومسارات محمية',
+        '📦 إدارة المنتجات مع صور ومتغيرات متعددة',
+        '📱 تصميم متجاوب 100% لجميع الأجهزة',
+        '✨ رسوم متحركة سلسة مع Framer Motion',
+        '🤖 مبني بمساعدة Bolt AI للتصميم'
+      ]
     }
   },
-  {
-    id: 'restaurant',
-    title: {
-      en: 'Restaurant Website',
-      ar: 'موقع مطعم'
-    },
-    description: {
-      en: 'Developed a responsive restaurant website with professional visual animations.',
-      ar: 'تطوير موقع مطعم متجاوب مع رسوم متحركة بصرية احترافية.'
-    },
-    fullDescription: {
-      en: 'A modern, fully responsive restaurant website featuring smooth animations, interactive menu displays, online reservation system, and an elegant design that showcases the restaurant\'s ambiance and offerings.',
-      ar: 'موقع مطعم حديث ومتجاوب بالكامل يتميز برسوم متحركة سلسة، عروض قائمة تفاعلية، نظام حجز عبر الإنترنت، وتصميم أنيق يعرض أجواء المطعم وعروضه.'
-    },
-    technologies: ['HTML', 'CSS', 'JavaScript'],
-    links: {
-      live: '#'
-    },
-    category: 'frontend',
-    image: '/projects/restaurant.jpg',
-    features: {
-      en: ['Responsive Design', 'Smooth Animations', 'Interactive Menu', 'Reservation System', 'Modern UI/UX'],
-      ar: ['تصميم متجاوب', 'رسوم متحركة سلسة', 'قائمة تفاعلية', 'نظام الحجز', 'واجهة حديثة']
-    }
-  }
+ 
+ 
 ];
 
 export const skills = {
