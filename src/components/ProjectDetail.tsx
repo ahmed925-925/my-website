@@ -264,6 +264,7 @@ export default function ProjectDetail() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.9 }}
+            className="mb-8 md:mb-12"
           >
             <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl rounded-2xl md:rounded-3xl p-6 md:p-8 shadow-xl border border-gray-200 dark:border-gray-700">
               <motion.h3
@@ -296,6 +297,180 @@ export default function ProjectDetail() {
               </div>
             </div>
           </motion.div>
+
+          {/* Special Sections for EduQuest Project */}
+          {project.id === 'eduquest' && (
+            <>
+              {/* My Role & Responsibilities Section */}
+              {(project.myRole || project.responsibilities) && (
+                <motion.div
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 1.2 }}
+                  className="mb-8 md:mb-12"
+                >
+                  <div className="bg-gradient-to-br from-blue-50/80 to-purple-50/80 dark:from-blue-900/20 dark:to-purple-900/20 backdrop-blur-xl rounded-2xl md:rounded-3xl p-6 md:p-8 shadow-xl border border-blue-200 dark:border-blue-700">
+                    <motion.h3
+                      initial={{ opacity: 0, x: -20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: 1.3 }}
+                      className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-4 md:mb-6 flex items-center gap-3"
+                    >
+                      <span className="text-3xl">👨‍💻</span>
+                      {language === 'ar' ? 'دوري في المشروع' : 'My Role in the Project'}
+                    </motion.h3>
+                    
+                    {project.myRole && (
+                      <motion.p
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 1.4 }}
+                        className="text-base sm:text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-6"
+                      >
+                        {project.myRole[language]}
+                      </motion.p>
+                    )}
+
+                    {project.responsibilities && (
+                      <div className="space-y-3">
+                        <h4 className="text-lg font-semibold text-gray-900 dark:text-white flex items-center gap-2">
+                          <span className="text-xl">📋</span>
+                          {language === 'ar' ? 'المسؤوليات الأساسية' : 'Key Responsibilities'}
+                        </h4>
+                        <div className="grid grid-cols-1 gap-3">
+                          {project.responsibilities[language].map((responsibility, idx) => (
+                            <motion.div
+                              key={idx}
+                              initial={{ opacity: 0, x: -30 }}
+                              animate={{ opacity: 1, x: 0 }}
+                              transition={{ delay: 1.5 + idx * 0.1 }}
+                              className="flex items-start gap-3 p-3 bg-white/60 dark:bg-gray-800/60 rounded-lg"
+                            >
+                              <CheckCircle className="w-5 h-5 text-blue-500 dark:text-blue-400 flex-shrink-0 mt-0.5" />
+                              <span className="text-sm sm:text-base text-gray-700 dark:text-gray-200">{responsibility}</span>
+                            </motion.div>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                </motion.div>
+              )}
+
+              {/* Integrations Section */}
+              {project.integrations && (
+                <motion.div
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 1.4 }}
+                  className="mb-8 md:mb-12"
+                >
+                  <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl rounded-2xl md:rounded-3xl p-6 md:p-8 shadow-xl border border-gray-200 dark:border-gray-700">
+                    <motion.h3
+                      initial={{ opacity: 0, x: -20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: 1.5 }}
+                      className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-4 md:mb-6 flex items-center gap-3"
+                    >
+                      <span className="text-3xl">🔗</span>
+                      {language === 'ar' ? 'التكاملات والخدمات' : 'Integrations & Services'}
+                    </motion.h3>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                      {project.integrations.map((integration, idx) => (
+                        <motion.div
+                          key={idx}
+                          initial={{ opacity: 0, scale: 0.8 }}
+                          animate={{ opacity: 1, scale: 1 }}
+                          transition={{ delay: 1.6 + idx * 0.1 }}
+                          whileHover={{ scale: 1.05 }}
+                          className="p-4 bg-gradient-to-br from-green-50 to-blue-50 dark:from-green-900/20 dark:to-blue-900/20 rounded-xl border border-green-200 dark:border-green-700 text-center"
+                        >
+                          <span className="text-sm font-medium text-gray-700 dark:text-gray-200">{integration}</span>
+                        </motion.div>
+                      ))}
+                    </div>
+                  </div>
+                </motion.div>
+              )}
+
+              {/* Highlights Section */}
+              {project.highlights && (
+                <motion.div
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 1.6 }}
+                  className="mb-8 md:mb-12"
+                >
+                  <div className="bg-gradient-to-br from-yellow-50/80 to-orange-50/80 dark:from-yellow-900/20 dark:to-orange-900/20 backdrop-blur-xl rounded-2xl md:rounded-3xl p-6 md:p-8 shadow-xl border border-yellow-200 dark:border-yellow-700">
+                    <motion.h3
+                      initial={{ opacity: 0, x: -20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: 1.7 }}
+                      className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-4 md:mb-6 flex items-center gap-3"
+                    >
+                      <span className="text-3xl">🎯</span>
+                      {language === 'ar' ? 'أبرز الإنجازات التقنية' : 'Technical Highlights'}
+                    </motion.h3>
+                    <div className="space-y-4">
+                      {project.highlights[language].map((highlight, idx) => (
+                        <motion.div
+                          key={idx}
+                          initial={{ opacity: 0, x: -30 }}
+                          animate={{ opacity: 1, x: 0 }}
+                          transition={{ delay: 1.8 + idx * 0.1 }}
+                          className="flex items-start gap-3 p-4 bg-white/70 dark:bg-gray-800/70 rounded-xl border border-yellow-300 dark:border-yellow-600"
+                        >
+                          <span className="text-2xl">⭐</span>
+                          <span className="text-sm sm:text-base text-gray-700 dark:text-gray-200 leading-relaxed">{highlight}</span>
+                        </motion.div>
+                      ))}
+                    </div>
+                  </div>
+                </motion.div>
+              )}
+
+              {/* Author & Notes Section */}
+              {(project.author || project.notes) && (
+                <motion.div
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 1.8 }}
+                  className="mb-8 md:mb-12"
+                >
+                  <div className="bg-gradient-to-br from-purple-50/80 to-pink-50/80 dark:from-purple-900/20 dark:to-pink-900/20 backdrop-blur-xl rounded-2xl md:rounded-3xl p-6 md:p-8 shadow-xl border border-purple-200 dark:border-purple-700">
+                    {project.author && (
+                      <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 1.9 }}
+                        className="text-center mb-6"
+                      >
+                        <h3 className="text-xl font-bold text-gray-900 dark:text-white flex items-center justify-center gap-3 mb-2">
+                          <span className="text-2xl">👨‍💻</span>
+                          {project.author[language]}
+                        </h3>
+                      </motion.div>
+                    )}
+
+                    {project.notes && (
+                      <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 2 }}
+                        className="bg-white/60 dark:bg-gray-800/60 rounded-xl p-4"
+                      >
+                        <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-3 flex items-center gap-2">
+                          <span className="text-xl">📝</span>
+                          {language === 'ar' ? 'ملاحظات إضافية' : 'Additional Notes'}
+                        </h4>
+                        <p className="text-sm sm:text-base text-gray-700 dark:text-gray-300 leading-relaxed">{project.notes[language]}</p>
+                      </motion.div>
+                    )}
+                  </div>
+                </motion.div>
+              )}
+            </>
+          )}
         </div>
       </div>
     </motion.div>

@@ -1,4 +1,4 @@
-import { Github, Mail, MapPin } from 'lucide-react';
+import { Github, Mail, MapPin, Download } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useLanguage } from '../contexts/LanguageContext';
 import { personalInfo } from '../data/portfolio';
@@ -72,6 +72,18 @@ export default function Hero() {
                 className="px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-all duration-200 shadow-lg hover:shadow-xl"
               >
                 {t.hero.cta}
+              </motion.a>
+
+              <motion.a
+                href="https://drive.google.com/file/d/1k8JjrN0i5boODDwwXiOrBUq6VyK51KzP/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="px-8 py-3 bg-green-600 hover:bg-green-700 text-white rounded-lg font-medium transition-all duration-200 flex items-center gap-2 shadow-lg hover:shadow-xl"
+              >
+                <Download className="w-5 h-5" />
+                {t.hero.downloadCV}
               </motion.a>
 
               <motion.a

@@ -12,7 +12,7 @@ export const translations = {
       name: 'Ahmed Mohamed',
       title: 'MERN Stack Developer',
       subtitle: 'Full-Stack Developer specializing in modern web applications',
-      description: 'A MERN Stack Developer with one year of experience in building comprehensive web applications, specializing in designing interactive user interfaces using React and developing robust, secure back-end solutions with Node.js, Express.js, and MongoDB.',
+      description: 'I’m a passionate MERN Stack Developer with  two year of hands-on experience in building dynamic and user-focused web applications. I specialize in crafting engaging user interfaces with React and developing powerful, secure back-end systems using Node.js, Express.js, and MongoDB. I love turning ideas into functional, elegant, and scalable digital solutions..',
       cta: 'View My Work',
       downloadCV: 'Download CV',
       location: 'Qena, Egypt'
@@ -69,7 +69,7 @@ export const translations = {
       name: 'أحمد محمد',
       title: 'مطور MERN Stack',
       subtitle: 'مطور Full-Stack متخصص في تطبيقات الويب الحديثة',
-      description: 'مطور MERN Stack بخبرة عام واحد في بناء تطبيقات ويب شاملة، متخصص في تصميم واجهات مستخدم تفاعلية باستخدام React وتطوير حلول back-end قوية وآمنة باستخدام Node.js و Express.js و MongoDB.',
+      description: 'أنا مطور MERN Stack شغوف، ولديّ خبرة عملية لمدة عامين في بناء تطبيقات ويب ديناميكية ومُركزة على المستخدم. أتخصص في تصميم واجهات مستخدم جذابة باستخدام React، وتطوير أنظمة خلفية قوية وآمنة باستخدام Node.js وExpress.js وMongoDB. أستمتع بتحويل الأفكار إلى حلول رقمية عملية وأنيقة وقابلة للتطوير.',
       cta: 'عرض أعمالي',
       downloadCV: 'تحميل السيرة الذاتية',
       location: 'قنا، مصر'

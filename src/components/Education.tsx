@@ -1,10 +1,12 @@
-import { GraduationCap, Award, Calendar } from 'lucide-react';
-import { motion } from 'framer-motion';
+import { GraduationCap, Award, Calendar, X } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { useLanguage } from '../contexts/LanguageContext';
 import { education, certifications } from '../data/portfolio';
+import { useState } from 'react';
 
 export default function Education() {
   const { language, t } = useLanguage();
+  const [selectedCertificate, setSelectedCertificate] = useState<typeof certifications[0] | null>(null);
 
   return (
     <section id="education" className="min-h-screen flex items-center justify-center px-4 sm:px-6 md:px-8 py-20">
@@ -85,6 +87,7 @@ export default function Education() {
                   viewport={{ once: true }}
                   transition={{ delay: idx * 0.1 }}
                   whileHover={{ y: -8, scale: 1.02 }}
+                  onClick={() => setSelectedCertificate(cert)}
                   className="group bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer"
                 >
                   {/* Certificate Image */}
@@ -92,21 +95,12 @@ export default function Education() {
                     <img
                       src={cert.image}
                       alt={cert.name[language]}
-                      className="w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                      className="w-full h-full object-contain p-2 bg-white"
                       onError={(e) => {
-                        e.currentTarget.style.opacity = '0';
+                        // Show placeholder if image fails to load
+                        e.currentTarget.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgZmlsbD0iI2Y3ZjdmNyIvPjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTRweCIgZmlsbD0iIzk5OTk5OSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkNlcnRpZmljYXRlPC90ZXh0Pjwvc3ZnPg==';
                       }}
                     />
-                    {/* Overlay gradient */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-blue-600/80 to-purple-600/80 flex items-center justify-center">
-                      <motion.div
-                        initial={{ scale: 0 }}
-                        whileInView={{ scale: 1 }}
-                        transition={{ delay: idx * 0.1 + 0.3, type: 'spring' }}
-                      >
-                        <Award className="w-16 h-16 text-white opacity-90" />
-                      </motion.div>
-                    </div>
                     
                     {/* Date Badge */}
                     {cert.date && (
@@ -136,6 +130,73 @@ export default function Education() {
             </div>
           </motion.div>
         </div>
+
+        {/* Certificate Modal */}
+        <AnimatePresence>
+          {selectedCertificate && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="fixed inset-0 bg-black/80 flex items-center justify-center z-50 p-4"
+              onClick={() => setSelectedCertificate(null)}
+            >
+              <motion.div
+                initial={{ scale: 0.8, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                exit={{ scale: 0.8, opacity: 0 }}
+                transition={{ type: "spring", damping: 20, stiffness: 300 }}
+                className="relative max-w-4xl max-h-[90vh] bg-white dark:bg-gray-900 rounded-2xl overflow-hidden shadow-2xl"
+                onClick={(e) => e.stopPropagation()}
+              >
+                {/* Close Button */}
+                <button
+                  onClick={() => setSelectedCertificate(null)}
+                  className="absolute top-4 right-4 z-10 p-2 bg-black/50 hover:bg-black/70 text-white rounded-full transition-colors"
+                >
+                  <X className="w-6 h-6" />
+                </button>
+
+                {/* Certificate Image */}
+                <div className="p-4">
+                  <img
+                    src={selectedCertificate.image}
+                    alt={selectedCertificate.name[language]}
+                    className="w-full h-auto object-contain max-h-[60vh]"
+                  />
+                </div>
+
+                {/* Certificate Details */}
+                <div className="p-6 border-t border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800">
+                  <div className="space-y-4">
+                    {/* Certificate Name */}
+                    <h3 className="text-xl md:text-2xl font-bold text-gray-900 dark:text-white">
+                      {selectedCertificate.name[language]}
+                    </h3>
+                    
+                    {/* Issuer */}
+                    <div className="flex items-center gap-2 text-gray-600 dark:text-gray-400">
+                      <Award className="w-5 h-5 text-blue-500 flex-shrink-0" />
+                      <span className="font-medium">{selectedCertificate.issuer[language]}</span>
+                      {selectedCertificate.date && (
+                        <span className="ml-auto text-sm bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 px-2 py-1 rounded-full">
+                          {selectedCertificate.date}
+                        </span>
+                      )}
+                    </div>
+
+                    {/* Description */}
+                    {selectedCertificate.description && (
+                      <div className="text-gray-700 dark:text-gray-300 leading-relaxed">
+                        <p>{selectedCertificate.description[language]}</p>
+                      </div>
+                    )}
+                  </div>
+                </div>
+              </motion.div>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
     </section>
   );

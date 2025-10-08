@@ -24,8 +24,8 @@ export const projects = [
       ar: 'منصة ويب حديثة لاستكشاف وشراء وبيع المنتجات الرقمية والقوالب وحلول الأعمال. توفر المنصة ملفات تعريف للمطورين، تقييمات للمنتجات، إدارة سلة المشتريات، وواجهة مستخدم متجاوبة.'
     },
     fullDescription: {
-      en: 'Codie Market is a comprehensive marketplace for digital products and business templates. Users can browse developer profiles, view product details, add items to their cart, and complete purchases. The platform supports multi-language (Arabic/English), advanced search and filtering, and interactive forms for product creation. Built with React, Redux, Bootstrap, TailwindCSS, and integrates with a Node.js/Express backend API. Features include secure authentication with OTP verification, admin and seller dashboards, product management system, and a seamless shopping experience.',
-      ar: 'كودي ماركت هو سوق شامل للمنتجات الرقمية وقوالب الأعمال. يمكن للمستخدمين تصفح ملفات المطورين، عرض تفاصيل المنتجات، إضافة العناصر إلى السلة، وإتمام عمليات الشراء. تدعم المنصة تعدد اللغات (العربية/الإنجليزية)، البحث والتصفية المتقدمة، ونماذج تفاعلية لإنشاء المنتجات. تم بناء المنصة باستخدام React وRedux وBootstrap وTailwindCSS، وتتكامل مع واجهة برمجة تطبيقات باك-إند مبنية بـ Node.js/Express. تتضمن الميزات تسجيل دخول آمن مع التحقق عبر OTP، لوحات تحكم للإدارة والبائعين، نظام إدارة المنتجات، وتجربة تسوق سلسة.'
+      en: "I built the entire front-end of Codie Market from scratch and actively contributed to the back-end development as well. It’s one of the most challenging and educational projects I’ve worked on — I faced multiple technical obstacles, but each one helped me grow and refine my skills. Codie Market is a comprehensive marketplace for digital products and business templates. It allows users to browse developer profiles, explore detailed product pages, add items to their cart, and complete purchases smoothly. The platform supports both Arabic and English, features advanced search and filtering, and includes interactive forms for product creation. I developed it using React, Redux, Bootstrap, while integrating it with a Node.js/Express backend API. The project also includes secure authentication with OTP verification, admin and seller dashboards, and a complete product management system, delivering a seamless and engaging shopping experience.",
+      ar: 'قمتُ ببناء الواجهة الأمامية لسوق كودي من الصفر، وساهمتُ بفعالية في تطوير الواجهة الخلفية. يُعدّ هذا المشروع من أكثر المشاريع التي عملت عليها تحديًا وتثقيفًا، فقد واجهتُ العديد من العقبات التقنية، لكن كل واحدة منها ساعدتني على تنمية مهاراتي وصقلها. سوق كودي هو سوق شامل للمنتجات الرقمية وقوالب الأعمال. يتيح للمستخدمين تصفح ملفات تعريف المطورين، واستكشاف صفحات المنتجات التفصيلية، وإضافة المنتجات إلى سلة التسوق، وإتمام عمليات الشراء بسلاسة. تدعم المنصة اللغتين العربية والإنجليزية، وتتميز ببحث وتصفية متقدمين، وتتضمن نماذج تفاعلية لإنشاء المنتجات.طوّرتُه باستخدام React وRedux وBootstrap، مع دمجه مع واجهة برمجة تطبيقات خلفية Node.js/Express. يتضمن المشروع أيضًا مصادقة آمنة مع التحقق من كلمة المرور لمرة واحدة (OTP)، ولوحات معلومات للمسؤول والبائع، ونظامًا متكاملًا لإدارة المنتجات، مما يوفر تجربة تسوق سلسة وجذابة..'
     },
     technologies: ['React', 'Redux', 'React Router', 'Bootstrap', 'TailwindCSS', 'Axios', 'Font Awesome', 'Vite', 'Node.js', 'Express.js', 'MongoDB'],
     links: {
@@ -60,34 +60,136 @@ export const projects = [
       ]
     }
   },
-   {
-    id: 'eduquest',
-    title: {
-      en: 'EduQuest.com',
-      ar: 'رحلة التعلم'
-    },
-    description: {
-      en: 'Developed a comprehensive educational system (LMS) with basic and advanced features. Implemented JWT authentication, API interfaces for user management and payment gateway integration.',
-      ar: 'تطوير نظام تعليمي شامل (LMS) بميزات أساسية ومتقدمة. تنفيذ مصادقة JWT، واجهات API لإدارة المستخدمين وتكامل بوابة الدفع.'
-    },
-    fullDescription: {
-      en: 'A comprehensive Learning Management System built with the MERN stack. Features include user authentication with JWT, course management, payment gateway integration, real-time updates, and interactive learning modules. The system supports multiple user roles including students, instructors, and administrators.',
-      ar: 'نظام إدارة تعليمي شامل مبني بتقنية MERN Stack. يتضمن مصادقة المستخدم باستخدام JWT، إدارة الدورات، تكامل بوابة الدفع، التحديثات الفورية، ووحدات تعليمية تفاعلية. يدعم النظام أدوار متعددة للمستخدمين بما في ذلك الطلاب والمدرسين والمسؤولين.'
-    },
-    technologies: ['React', 'Node.js', 'Express.js', 'MongoDB', 'JWT', 'Firebase'],
-    links: {
-      frontend: 'https://github.com/amedmohmed925/Final-project-Frontend-project---nodejs-course',
-      backend: 'https://github.com/amedmohmed925/Final-Project-Nodejs',
-      live: 'https://eduquestcourses.netlify.app/'
-    },
-    category: 'fullstack',
-    image: '/projects/eduquest.png', // Add your project image
-    features: {
-      en: ['User Authentication & Authorization', 'Course Management System', 'Payment Gateway Integration', 'Real-time Updates', 'Interactive Learning Modules'],
-      ar: ['مصادقة وتفويض المستخدم', 'نظام إدارة الدورات', 'تكامل بوابة الدفع', 'التحديثات الفورية', 'وحدات تعليمية تفاعلية']
-    }
+  {
+  id: 'eduquest',
+  title: {
+    en: 'EduQuest.com',
+    ar: 'رحلة التعلم (EduQuest)'
   },
-   {
+  description: {
+    en: "I built EduQuest — a full-featured online Learning Management System (LMS) from scratch, including both frontend and backend. It supports live sessions, course management, exams, payments and a rich community system.",
+    ar: 'قمت بتطوير EduQuest — نظام تعليمي إلكتروني متكامل (LMS) من الصفر، بما يشمل الواجهة الأمامية والخلفية. يدعم جلسات مباشرة، إدارة الكورسات، الامتحانات، الدفع، ونظام مجتمع تفاعلي متقدّم.'
+  },
+  shortDescription: {
+    en: "Complete Learning Management System with live classes, WebRTC video sessions, real-time chat, advanced exam engine, payment integration, and comprehensive analytics.",
+    ar: 'نظام إدارة تعليمي متكامل مع فصول مباشرة، جلسات فيديو WebRTC، دردشة فورية، محرك امتحانات متقدم، تكامل دفع، وتحليلات شاملة.'
+  },
+  fullDescription: {
+    en: `I designed and implemented EduQuest end-to-end (frontend + backend). 
+I developed a scalable Node.js/Express API with MongoDB (Mongoose), implemented secure authentication (JWT + refresh tokens + OTP email verification), role-based access control (Student / Teacher / Admin), and integrated payment processing and invoicing.
+On the frontend I built a responsive React (Vite) application with Redux Toolkit for state management, an advanced video player with progress tracking and watermarking, in-app chat, and dashboards for each role.
+Key capabilities include WebRTC-based live sessions (video/audio + screen sharing), real-time features via Socket.IO, an advanced exam engine with auto-grading and anti-cheating controls, certificate PDF generation, and background task processing with Bull + Redis for heavy jobs (emails, video processing, reports).`,
+    ar: `قمت بتصميم وتنفيذ EduQuest من البداية للنهاية (واجهة أمامية + باك إند).
+طورت واجهات API قابلة للتوسع باستخدام Node.js و Express مع قاعدة بيانات MongoDB (Mongoose)، وطبّقت نظام مصادقة آمن (JWT + Refresh Tokens + تحقق OTP عبر البريد)، ونظام صلاحيات قائم على الأدوار (طالب / مدرس / مشرف). 
+على الواجهة الأمامية طورت تطبيق React مبني على Vite مع Redux Toolkit لإدارة الحالة، مشغل فيديو متقدم مع تتبّع التقدّم وعلامة مائية، دردشة داخل التطبيق، ولوحات تحكم مخصّصة لكل دور.
+تشمل الميزات الأساسية: جلسات مباشرة باستخدام WebRTC (فيديو/صوت ومشاركة شاشة)، تحديثات فورية عبر Socket.IO، محرك امتحانات متقدّم مع تصحيح تلقائي ووسائل منع الغش، توليد شهادات PDF، ومعالجة مهام الخلفية باستخدام Bull + Redis (لبعث البريد ومعالجة الفيديو والتقارير).`
+  },
+  technologies: [
+    'React (Vite)', 'Redux Toolkit', 'React Router', 'React Player',
+    'Node.js', 'Express.js', 'MongoDB', 'Mongoose',
+    'Socket.IO', 'WebRTC', 'ICE Servers',
+    'JWT', 'bcrypt', 'OTP (email)',
+    'Cloudinary', 'Multer', 'AWS S3 (optional)',
+    'Paymob (payment gateway)', 'Stripe (optional)',
+    'Bull', 'Redis',
+    'Nodemailer', 'PDFKit',
+    'Winston (logging)', 'Swagger (API docs)',
+    'Mocha', 'Chai', 'Supertest', 'Sinon',
+    'Chart.js', 'React Chart.js 2'
+  ],
+  integrations: [
+    'Cloudinary (media storage & transforms)',
+    'Paymob (payment processing)',
+    'SMTP provider via Nodemailer',
+  ],
+  links: {
+    frontend: 'https://github.com/amedmohmed925/Final-project-Frontend-project---nodejs-course',
+    backend: 'https://github.com/amedmohmed925/Final-Project-Nodejs',
+    live: 'https://eduquestcourses.netlify.app/'
+  },
+  category: 'fullstack',
+  image: '/projects/eduquest.png',
+ 
+  features: {
+    en: [
+      'Full user management (registration, email OTP, login with JWT + refresh tokens, role-based access)',
+      'Course authoring: sections, lessons, resources (video, PDF, links)',
+      'Live sessions: WebRTC peer-to-peer video/audio, screen sharing, participant roles & recording hooks',
+      'Real-time chat & notifications using Socket.IO',
+      'Advanced exam engine: timed tests, auto-grading, question bank, anti-cheating features',
+      'Payment & subscriptions: cart, coupons, invoice generation, Paymob integration',
+      'Certificate generation (PDF) and verification system',
+      'Background processing for heavy tasks (emails, video jobs) using Bull + Redis',
+      'Comprehensive admin panel: approvals, logs, analytics and coupon management',
+      'Analytics dashboards (users, courses, sales, attendance) with Chart.js'
+    ],
+    ar: [
+      'إدارة مستخدمين كاملة (تسجيل، تحقق OTP عبر البريد، تسجيل JWT + Refresh Tokens، صلاحيات حسب الأدوار)',
+      'إنشاء كورسات: أقسام، دروس، موارد (فيديو، PDF، روابط)',
+      'جلسات مباشرة: WebRTC للفيديو/الصوت، مشاركة الشاشة، أدوار المشاركين وخيارات التسجيل',
+      'دردشة وإشعارات فورية باستخدام Socket.IO',
+      'محرك امتحانات متقدّم: اختبارات زمنية، تصحيح تلقائي، بنك أسئلة، وسائل منع الغش',
+      'نظام دفع والاشتراكات: سلة، كوبونات، فواتير، وتكامل مع Paymob',
+      'توليد الشهادات بصيغ PDF ونظام للتحقق من الشهادة',
+      'معالجة مهام الخلفية (بريد، معالجة فيديو) باستخدام Bull + Redis',
+      'لوحة تحكم إدارية متكاملة: موافقات، سجلات، إحصائيات وإدارة كوبونات',
+      'لوحات تحليلات (المستخدمين، الكورسات، المبيعات، الحضور) باستخدام Chart.js'
+    ]
+  },
+  myRole: {
+    en: "I built the entire platform end-to-end: I implemented the backend APIs, designed the database schemas, developed the frontend UI, integrated real-time features and payment gateways, and deployed the system.",
+    ar: 'قمتُ بتطوير المنصة كاملة من الألف إلى الياء: طبّقت واجهات الـ API للباك إند، صممت مخططات قاعدة البيانات، طورت واجهة المستخدم، دمجت ميزات التحديث الفوري وبوابات الدفع، ونشرت المنصة.'
+  },
+  responsibilities: {
+    en: [
+      'Architected backend with Node.js, Express and MongoDB (Mongoose).',
+      'Implemented authentication & authorization (JWT, refresh tokens, OTP verification).',
+      'Built responsive React frontend with Redux Toolkit and role-based dashboards.',
+      'Integrated WebRTC + Socket.IO for live classes and real-time interactions.',
+      'Developed exam engine with auto-grading, timers and question bank.',
+      'Integrated Cloudinary for media uploads and Paymob for payments.',
+      'Implemented background workers with Bull + Redis for email, reports and heavy jobs.',
+      'Wrote unit & integration tests (Mocha, Chai, Supertest) and documented APIs with Swagger.',
+      'Deployed services and set up logging/monitoring (Winston).'
+    ],
+    ar: [
+      'تصميم بنية الباك إند باستخدام Node.js و Express و MongoDB (Mongoose).',
+      'تنفيذ المصادقة والتفويض (JWT، Refresh Tokens، تحقق OTP عبر البريد).',
+      'بناء واجهة React متجاوبة مع Redux Toolkit ولوحات تحكم حسب الدور.',
+      'دمج WebRTC و Socket.IO للجلسات المباشرة والتفاعل الفوري.',
+      'تطوير محرك الامتحانات مع التصحيح التلقائي والمؤقتات وبنك الأسئلة.',
+      'تكامل Cloudinary لرفع الوسائط و Paymob لعمليات الدفع.',
+      'تنفيذ عمال الخلفية باستخدام Bull + Redis للبريد والتقارير والمهام الثقيلة.',
+      'كتابة اختبارات وحدة واندماج (Mocha، Chai، Supertest) وتوثيق الـ API باستخدام Swagger.',
+      'نشر الخدمات وإعداد السجلات والمراقبة (Winston).'
+    ]
+  },
+  highlights: {
+    en: [
+      'I implemented secure OTP email verification and refresh-token flow to ensure safe long sessions.',
+      'Live classroom feature using WebRTC with screen-share and participant role controls.',
+      'Scalable job queue for processing emails and media using Bull + Redis.',
+      'Automated certificate generation (PDF) and downloadable invoices.',
+      'Complete admin dashboard for moderation, analytics and coupon management.'
+    ],
+    ar: [
+      'قمت بتنفيذ نظام تحقق OTP آمن وتدفق Refresh Tokens لضمان جلسات طويلة آمنة.',
+      'ميزة الفصل المباشر باستخدام WebRTC مع مشاركة شاشة وتحكم في أدوار المشاركين.',
+      'نظام قوائم انتظار (قابل للتوسع) لمعالجة البريد والوسائط باستخدام Bull + Redis.',
+      'توليد تلقائي للشهادات (PDF) وفواتير قابلة للتحميل.',
+      'لوحة تحكم إدارية كاملة للمراجعة، التحليلات وإدارة الكوبونات.'
+    ]
+  },
+  author: {
+    en: 'Ahmed Mohammed — Fullstack Developer',
+    ar: 'أحمد محمد — مطور Fullstack'
+  },
+  notes: {
+    en: 'This project was built from scratch. Repositories contain setup instructions and API docs (Swagger) in the README. Feel free to check the live demo and the source code for implementation details.',
+    ar: 'تم بناء هذا المشروع من الصفر. المستودعات تحتوي على تعليمات التشغيل وتوثيق API (Swagger) في ملف README. اطلع على العرض الحي والكود المصدري لمزيد من التفاصيل.'
+  }
+},
+{
     id: 'Casher',
     title: {
       en: 'Casher - Multi-Tenant POS System',
@@ -336,7 +438,11 @@ export const certifications = [
       en: 'Creativa Innovation Hub, Qena',
       ar: 'مركز كرياتيفا للابتكار، قنا'
     },
-    image: '/certificates/react-cert.jpg', // Add your certificate image
+    description: {
+      en: 'Successfully completed an intensive React.js training program covering modern React concepts, component development, state management, hooks, and building responsive web applications.',
+      ar: 'أكملت بنجاح برنامج تدريبي مكثف في React.js يغطي مفاهيم React الحديثة، تطوير المكونات، إدارة الحالة، الخطافات، وبناء تطبيقات ويب متجاوبة.'
+    },
+    image: '/certificates/react-cert.png',
     date: '2024'
   },
   {
@@ -348,19 +454,30 @@ export const certifications = [
       en: 'Creativa Innovation Hub, Qena',
       ar: 'مركز كرياتيفا للابتكار، قنا'
     },
-    image: '/certificates/backend-cert.jpg',
-    date: '2024'
+    description: {
+      en: 'Completed comprehensive backend development training covering Node.js, Express.js, MongoDB, RESTful APIs, authentication systems, and server-side application architecture.',
+      ar: 'أكملت تدريباً شاملاً في تطوير الواجهات الخلفية يغطي Node.js وExpress.js وMongoDB وواجهات RESTful API وأنظمة المصادقة ومعمارية التطبيقات من جانب الخادم.'
+    },
+    image: '/certificates/backend-cert.png',
+    date: '2025'
   },
-  {
-    name: {
-      en: 'Pre-Programming Certificate',
-      ar: 'شهادة ما قبل البرمجة'
-    },
-    issuer: {
-      en: 'Creativa Innovation Hub, Qena',
-      ar: 'مركز كرياتيفا للابتكار، قنا'
-    },
-    image: '/certificates/preprogramming-cert.jpg',
-    date: '2023'
-  }
+ 
+ {
+  name: {
+    en: 'DIGITOPIA Competition Certificate',
+    ar: 'شهادة مسابقة DIGITOPIA'
+  },
+  issuer: {
+    en: 'Ministry of Communications and Information Technology (MCIT), Egypt',
+    ar: 'وزارة الاتصالات وتكنولوجيا المعلومات – مصر'
+  },
+  description: {
+    en: 'Awarded for active participation in the DIGITOPIA competition in the field of software development and artificial intelligence, achieving the second stage as part of my startup "Codie".',
+    ar: 'تم الحصول عليها لمشاركتي الفعالة في مسابقة DIGITOPIA في مجال البرمجيات والذكاء الاصطناعي، وتحقيقي المرحلة الثانية ضمن فريقي في شركة Codie.'
+  },
+  image: '/certificates/digitopia-cert.png',
+  date: '2025'
+}
+
+
 ];
